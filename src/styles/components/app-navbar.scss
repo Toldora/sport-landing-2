@@ -1,0 +1,64 @@
+.app-navbar {
+  position: relative;
+  z-index: var(--z-app-navbar);
+  height: var(--app-navbar-height);
+  width: 100%;
+  background-color: var(--col-gordons-green);
+}
+
+.app-navbar__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  justify-content: center;
+}
+
+.app-navbar__logo-link {
+  flex-shrink: 0;
+}
+
+.app-navbar__logo {
+  display: inline-flex;
+  aspect-ratio: 5.14;
+
+  @media (orientation: portrait) {
+    width: to-rem(153);
+  }
+
+  @media (orientation: landscape) {
+    width: to-rem(204);
+  }
+}
+
+.app-navbar__nav-list {
+  display: none;
+
+  @include respond-above(tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.app-navbar__nav-list-item {
+  &:not(:last-child) {
+    margin-right: to-rem(40);
+  }
+
+  button {
+    text-transform: uppercase;
+    transition: color var(--hover-transition);
+
+    @include hover {
+      color: var(--col-incision);
+    }
+  }
+}
+
+.app-navbar__sign-up-btn {
+  margin-left: auto;
+
+  @include respond-above(tablet) {
+    margin-left: 0;
+  }
+}

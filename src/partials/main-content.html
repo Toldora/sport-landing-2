@@ -1,260 +1,229 @@
 <main class="main container">
-  <a
-    class="main__logo"
-    href="https://mayan.bet/"
-    target="_blank"
-    rel="nofollow noopener noreferrer"
-  >
-    {{> svg-icon width="164" height="32" name='logo' }}
-  </a>
-  <h2 class="main__title">
-    Ganhe um bônus de até
-    <span class="main__text--accent">R$ 13.500</span> hoje!
-  </h2>
-  <p class="main__subtitle">
-    Mayan Bet, o maior bônus de apostas esportivas do Brasil.
-  </p>
   <section class="main__section">
-    <div class="main__decor-wrapper">
-      <picture class="main__decor">
-        <source
-          type="image/webp"
-          srcset="
-            /img/decor/main-pic.webp     700w,
-            /img/decor/main-pic@2x.webp 1400w
-          "
-          sizes="700px"
-        />
-        <source
-          type="image/png"
-          srcset="
-            /img/decor/main-pic.png     700w,
-            /img/decor/main-pic@2x.png 1400w
-          "
-          sizes="700px"
-        />
-        <img
-          src="/img/decor/main-pic.png"
-          width="700"
-          height="810"
-          alt=""
-          loading="lazy"
-        />
-      </picture>
-      <div class="main__glow"></div>
-    </div>
-    <div class="main__desktop-sign-up-wrapper">
-      <a
-        class="main__desktop-sign-up-logo"
-        href="https://mayan.bet/"
-        target="_blank"
-        rel="nofollow noopener noreferrer"
-      >
-        {{> svg-icon width="114" height="22" name='logo' }}
-      </a>
-      {{> sign-up-form class="main__desktop-sign-up-form" title="Criar Sua Conta
-      Grátis" name="desktopSignUp" }}
-    </div>
+    <picture class="main__main-pic">
+      <source
+        type="image/webp"
+        srcset="
+          /img/decor/main-pic.webp     874w,
+          /img/decor/main-pic@2x.webp 1748w
+        "
+        sizes="874px"
+      />
+      <source
+        type="image/jpeg"
+        srcset="/img/decor/main-pic.jpg 874w, /img/decor/main-pic@2x.jpg 1748w"
+        sizes="874px"
+      />
+      <img
+        src="/img/decor/main-pic.jpg"
+        width="874"
+        height="300"
+        alt=""
+        loading="lazy"
+      />
+    </picture>
+    <h2 class="main__title main__text--accent">
+      O maior bônus de apostas esportivas do Brasil
+    </h2>
+    <p class="main__subtitle">R$13.500 ilimitados esperam por você!</p>
+    <button
+      class="main__cta-btn app-button js-show-auth-btn"
+      type="button"
+      aria-label="Inscrever-se"
+    >
+      Inscrever-se
+    </button>
+    <ul class="main__advantages-list">
+      <li class="main__advantages-list-item">
+        <picture class="main__advantage-img">
+          <source
+            type="image/webp"
+            srcset="
+              /img/advantages/advantage-1.webp    180w,
+              /img/advantages/advantage-1@2x.webp 360w
+            "
+            sizes="180px"
+          />
+          <source
+            type="image/png"
+            srcset="
+              /img/advantages/advantage-1.png    180w,
+              /img/advantages/advantage-1@2x.png 360w
+            "
+            sizes="180px"
+          />
+          <img
+            src="/img/advantages/advantage-1.png"
+            width="180"
+            height="180"
+            alt=""
+            loading="lazy"
+          />
+        </picture>
+        <h3 class="main__advantage-title">Apostas Esportivas</h3>
+        <p>
+          Não perca mais tempo! Junte-se a milhões de apostadores e conquiste a
+          vitória nos seus esportes favoritos.
+        </p>
+      </li>
+      <li class="main__advantages-list-item">
+        <picture class="main__advantage-img">
+          <source
+            type="image/webp"
+            srcset="
+              /img/advantages/advantage-2.webp    180w,
+              /img/advantages/advantage-2@2x.webp 360w
+            "
+            sizes="180px"
+          />
+          <source
+            type="image/png"
+            srcset="
+              /img/advantages/advantage-2.png    180w,
+              /img/advantages/advantage-2@2x.png 360w
+            "
+            sizes="180px"
+          />
+          <img
+            src="/img/advantages/advantage-2.png"
+            width="180"
+            height="180"
+            alt=""
+            loading="lazy"
+          />
+        </picture>
+        <h3 class="main__advantage-title">Crash Games</h3>
+        <p>Aposte, arrisque e vença! No Crash Game, a diversão é garantida.</p>
+      </li>
+      <li class="main__advantages-list-item">
+        <picture class="main__advantage-img">
+          <source
+            type="image/webp"
+            srcset="
+              /img/advantages/advantage-3.webp    180w,
+              /img/advantages/advantage-3@2x.webp 360w
+            "
+            sizes="180px"
+          />
+          <source
+            type="image/png"
+            srcset="
+              /img/advantages/advantage-3.png    180w,
+              /img/advantages/advantage-3@2x.png 360w
+            "
+            sizes="180px"
+          />
+          <img
+            src="/img/advantages/advantage-3.png"
+            width="180"
+            height="180"
+            alt=""
+            loading="lazy"
+          />
+        </picture>
+        <h3 class="main__advantage-title">Cassino</h3>
+        <p>Mais de 2000 jogos no Cassino da Mayan.Bet</p>
+      </li>
+    </ul>
   </section>
-  <button
-    class="main__cta-btn app-button js-show-auth-btn"
-    type="button"
-    aria-label="Inscrever-se"
-  >
-    Inscrever-se
-  </button>
-  <ul class="main__advantages-list">
-    <li class="main__advantages-list-item">
-      <picture class="main__advantage-img">
-        <source
-          type="image/webp"
-          srcset="
-            /img/bonuses/bonus-1.webp    120w,
-            /img/bonuses/bonus-1@2x.webp 240w
-          "
-          sizes="120px"
-        />
-        <source
-          type="image/png"
-          srcset="
-            /img/bonuses/bonus-1.png    120w,
-            /img/bonuses/bonus-1@2x.png 240w
-          "
-          sizes="120px"
-        />
-        <img
-          src="/img/bonuses/bonus-1.png"
-          width="120"
-          height="120"
-          alt=""
-          loading="lazy"
-        />
-      </picture>
-      <div class="main__advantage-text-wrapper">
-        <h3 class="main__advantage-title">Abra sua conta:</h3>
-        <p>
-          Crie sua conta em um piscar de olhos e mergulhe em um oceano de
-          oportunidades de ganhar.
-        </p>
-      </div>
-    </li>
-    <li class="main__advantages-list-item">
-      <picture class="main__advantage-img">
-        <source
-          type="image/webp"
-          srcset="
-            /img/bonuses/bonus-2.webp    120w,
-            /img/bonuses/bonus-2@2x.webp 240w
-          "
-          sizes="120px"
-        />
-        <source
-          type="image/png"
-          srcset="
-            /img/bonuses/bonus-2.png    120w,
-            /img/bonuses/bonus-2@2x.png 240w
-          "
-          sizes="120px"
-        />
-        <img
-          src="/img/bonuses/bonus-2.png"
-          width="120"
-          height="120"
-          alt=""
-          loading="lazy"
-        />
-      </picture>
-      <div class="main__advantage-text-wrapper">
-        <h3 class="main__advantage-title">Depósito relâmpago:</h3>
-        <p>
-          Faça seus depósitos com rapidez e segurança usando o PIX. Sua diversão
-          está a apenas alguns segundos de distância.
-        </p>
-      </div>
-    </li>
-    <li class="main__advantages-list-item">
-      <picture class="main__advantage-img">
-        <source
-          type="image/webp"
-          srcset="
-            /img/bonuses/bonus-3.webp    120w,
-            /img/bonuses/bonus-3@2x.webp 240w
-          "
-          sizes="120px"
-        />
-        <source
-          type="image/png"
-          srcset="
-            /img/bonuses/bonus-3.png    120w,
-            /img/bonuses/bonus-3@2x.png 240w
-          "
-          sizes="120px"
-        />
-        <img
-          src="/img/bonuses/bonus-3.png"
-          width="120"
-          height="120"
-          alt=""
-          loading="lazy"
-        />
-      </picture>
-      <div class="main__advantage-text-wrapper">
-        <h3 class="main__advantage-title">Bônus Ilimitado:</h3>
-        <p>
-          Prepare-se para o melhor bônus do país! Um bônus insano de 350%,
-          ilimitado até R$13.500!
-        </p>
-      </div>
-    </li>
-  </ul>
-  <p class="main__possibilities">
-    Junte-se à Mayan.Bet e descubra um universo de possibilidades de ganhos! Não
-    perca tempo, a sorte espera por você!
-  </p>
-  <ul class="main__partners-list">
-    <li>
-      <picture class="main__partner-img">
-        <source
-          type="image/webp"
-          srcset="
-            /img/partners/partner-1.webp    116w,
-            /img/partners/partner-1@2x.webp 232w
-          "
-          sizes="116px"
-        />
-        <source
-          type="image/png"
-          srcset="
-            /img/partners/partner-1.png    116w,
-            /img/partners/partner-1@2x.png 232w
-          "
-          sizes="116px"
-        />
-        <img
-          src="/img/partners/partner-1.png"
-          width="116"
-          height="110"
-          alt=""
-          loading="lazy"
-        />
-      </picture>
-    </li>
-    <li>
-      <picture class="main__partner-img">
-        <source
-          type="image/webp"
-          srcset="
-            /img/partners/partner-2.webp    116w,
-            /img/partners/partner-2@2x.webp 232w
-          "
-          sizes="116px"
-        />
-        <source
-          type="image/png"
-          srcset="
-            /img/partners/partner-2.png    116w,
-            /img/partners/partner-2@2x.png 232w
-          "
-          sizes="116px"
-        />
-        <img
-          src="/img/partners/partner-2.png"
-          width="116"
-          height="110"
-          alt=""
-          loading="lazy"
-        />
-      </picture>
-    </li>
-    <li>
-      <picture class="main__partner-img">
-        <source
-          type="image/webp"
-          srcset="
-            /img/partners/partner-3.webp    116w,
-            /img/partners/partner-3@2x.webp 232w
-          "
-          sizes="116px"
-        />
-        <source
-          type="image/png"
-          srcset="
-            /img/partners/partner-3.png    116w,
-            /img/partners/partner-3@2x.png 232w
-          "
-          sizes="116px"
-        />
-        <img
-          src="/img/partners/partner-3.png"
-          width="116"
-          height="110"
-          alt=""
-          loading="lazy"
-        />
-      </picture>
-    </li>
-  </ul>
-  <div class="main__decor-ball"></div>
+  <div class="main__desktop-sign-up-wrapper">
+    <a
+      class="main__desktop-sign-up-logo"
+      href="https://mayan.bet/"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      {{> svg-icon width="256" height="50" name='logo' }}
+    </a>
+    {{> sign-up-form class="main__desktop-sign-up-form" title="Criar Sua Conta
+    Grátis" name="desktopSignUp" }}
+  </div>
+  <div class="main__partners-wrapper">
+    <p class="main__partners-title">Nossos Parceiros:</p>
+    <ul class="main__partners-list">
+      <li>
+        <picture class="main__partner-img">
+          <source
+            type="image/webp"
+            srcset="
+              /img/partners/partner-1.webp    116w,
+              /img/partners/partner-1@2x.webp 232w
+            "
+            sizes="116px"
+          />
+          <source
+            type="image/png"
+            srcset="
+              /img/partners/partner-1.png    116w,
+              /img/partners/partner-1@2x.png 232w
+            "
+            sizes="116px"
+          />
+          <img
+            src="/img/partners/partner-1.png"
+            width="116"
+            height="110"
+            alt=""
+            loading="lazy"
+          />
+        </picture>
+      </li>
+      <li>
+        <picture class="main__partner-img">
+          <source
+            type="image/webp"
+            srcset="
+              /img/partners/partner-2.webp    116w,
+              /img/partners/partner-2@2x.webp 232w
+            "
+            sizes="116px"
+          />
+          <source
+            type="image/png"
+            srcset="
+              /img/partners/partner-2.png    116w,
+              /img/partners/partner-2@2x.png 232w
+            "
+            sizes="116px"
+          />
+          <img
+            src="/img/partners/partner-2.png"
+            width="116"
+            height="110"
+            alt=""
+            loading="lazy"
+          />
+        </picture>
+      </li>
+      <li>
+        <picture class="main__partner-img">
+          <source
+            type="image/webp"
+            srcset="
+              /img/partners/partner-3.webp    116w,
+              /img/partners/partner-3@2x.webp 232w
+            "
+            sizes="116px"
+          />
+          <source
+            type="image/png"
+            srcset="
+              /img/partners/partner-3.png    116w,
+              /img/partners/partner-3@2x.png 232w
+            "
+            sizes="116px"
+          />
+          <img
+            src="/img/partners/partner-3.png"
+            width="116"
+            height="110"
+            alt=""
+            loading="lazy"
+          />
+        </picture>
+      </li>
+    </ul>
+  </div>
 </main>
 <div class="main__decor-confetti-1"></div>
 <div class="main__decor-confetti-2"></div>

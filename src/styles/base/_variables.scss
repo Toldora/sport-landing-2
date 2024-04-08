@@ -16,6 +16,7 @@
   --col-tibetan-yellow-rgb: #{$col-tibetan-yellow-rgb};
   --col-nuclear-fallout: #{$col-nuclear-fallout};
   --col-gordons-green: #{$col-gordons-green};
+  --col-gordons-green-rgb: #{$col-gordons-green-rgb};
   --col-rich-olive: #{$col-rich-olive};
   --col-vermilion-cinnabar: #{$col-vermilion-cinnabar};
   --col-radiant-silver: #{$col-radiant-silver};
@@ -77,6 +78,15 @@
 
   // Common
   --scrollbar-color: var(--primary-text-color);
+
+  // App navbar
+  @media (orientation: portrait) {
+    --app-navbar-height: #{to-rem(60)};
+  }
+
+  @media (orientation: landscape) {
+    --app-navbar-height: #{clamp(to-rem(60), vh(9), to-rem(80))};
+  }
 
   // App overlay
   --app-overlay-bg: rgba(var(--col-dark-tone-ink-rgb), 60%);

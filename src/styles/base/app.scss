@@ -130,9 +130,4 @@ a {
   position: relative;
   min-height: vh(100);
   overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  @include bg-img-webp('/img/bg/hor', true);
 }
