@@ -11,7 +11,6 @@
   position: relative;
   padding-top: to-rem(30);
   padding-bottom: to-rem(30);
-  font-size: to-rem(16);
 
   @include respond-above(medium) {
     display: grid;
@@ -22,15 +21,19 @@
   @include respond-above(xmedium) {
     padding-top: to-rem(60);
     padding-bottom: to-rem(60);
-    font-size: to-rem(18);
   }
 }
 
 .main__section {
   display: contents;
+  font-size: to-rem(16);
 
   @include respond-above(medium) {
     display: block;
+  }
+
+  @include respond-above(xmedium) {
+    font-size: to-rem(18);
   }
 }
 
@@ -39,6 +42,7 @@
   width: 100%;
   margin-bottom: to-rem(15);
   border-radius: to-rem(5);
+  overflow: hidden;
 
   @include respond-above(medium) {
     margin-bottom: to-rem(30);
@@ -201,44 +205,84 @@
   position: absolute;
   z-index: var(--z-hidden);
   width: to-rem(120);
-  aspect-ratio: 0.95;
-  top: to-rem(580);
-  left: -#{to-rem(30)};
+  aspect-ratio: 0.67;
+  top: to-rem(370);
+  left: -#{to-rem(12)};
 
   @include bg-image('/img/decor/confetti-1');
 
+  &::after {
+    content: '';
+    position: absolute;
+    top: -130%;
+    left: -70%;
+    width: to-rem(200);
+    aspect-ratio: 1;
+    background-color: var(--col-composite-artefact);
+    border-radius: 50%;
+    filter: blur(to-rem(90));
+
+    @include respond-above(medium) {
+      top: -70%;
+      width: 22vw;
+      filter: blur(to-rem(160));
+    }
+  }
+
   @include respond-above(medium) {
-    top: unset;
-    bottom: to-rem(160);
-    width: to-rem(270);
+    top: to-rem(460);
+    width: 10vw;
   }
 }
 
 .main__decor-confetti-2 {
   position: absolute;
   z-index: var(--z-hidden);
-  width: to-rem(180);
-  aspect-ratio: 0.36;
-  bottom: to-rem(80);
-  right: -#{to-rem(50)};
+  width: to-rem(106);
+  aspect-ratio: 0.412;
+  top: to-rem(630);
+  right: 0;
 
   @include bg-image('/img/decor/confetti-2');
 
   @include respond-above(medium) {
-    width: to-rem(260);
-    bottom: to-rem(130);
+    width: 13vw;
+    top: unset;
+    bottom: -#{to-rem(40)};
     right: 0;
+  }
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -50%;
-      right: -120%;
-      width: to-rem(677);
-      aspect-ratio: 1;
-      background-color: rgba(var(--col-lexaloffle-green-rgb), 50%);
-      border-radius: 50%;
-      filter: blur(to-rem(75));
+  &::after {
+    content: '';
+    position: absolute;
+    top: -90%;
+    left: -15%;
+    width: to-rem(250);
+    aspect-ratio: 1;
+    background-color: var(--col-tibetan-yellow);
+    border-radius: 50%;
+    filter: blur(to-rem(115));
+
+    @include respond-above(medium) {
+      width: 18vw;
+      top: -25%;
+      left: 25%;
+      filter: blur(to-rem(160));
     }
+  }
+}
+
+.main__decor-confetti-3 {
+  position: absolute;
+  z-index: var(--z-hidden);
+  width: to-rem(76);
+  aspect-ratio: 0.189;
+  top: to-rem(1150);
+  right: 0;
+
+  @include bg-image('/img/decor/confetti-3');
+
+  @include respond-above(medium) {
+    display: none;
   }
 }
