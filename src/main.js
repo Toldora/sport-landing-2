@@ -2,15 +2,18 @@ import '@/styles/index.scss';
 
 import 'virtual:svg-icons-register';
 import queryString from 'query-string';
+import {
+  SignUpForm,
+  compileSignUpFormMarkup,
+  getFromLS,
+  setToLS,
+} from 'mayanbet-sdk';
 import '@/plugins';
 
 import '@/js/modal';
-import { SignUpForm, openSignUpModal } from '@/js/sign-up';
+import { openSignUpModal } from '@/js/sign-up';
 // import '@/js/terms-and-privacy';
 import useViewportSizes from '@/js/use-viewport-sizes';
-import { getFromLS } from '@/js/local-storage';
-
-const showAuthBtnRef = document.querySelector('.js-show-auth-btn');
 
 useViewportSizes();
 
@@ -26,8 +29,27 @@ if (isAlreadyRegistered) {
   );
 }
 
-new SignUpForm({
-  formRef: document.forms.desktopSignUp,
+const FORM_NAME = 'desktopSignUp';
+
+const markup = compileSignUpFormMarkup({
+  formName: FORM_NAME,
+  formClass: 'main__desktop-sign-up-form',
+  title: 'Criar Sua Conta Grátis',
 });
+
+const desktopSignUpWrapperRef = document.querySelector(
+  '.js-desktop-sign-up-wrapper',
+);
+
+desktopSignUpWrapperRef.insertAdjacentHTML('beforeend', markup);
+
+new SignUpForm({
+  formRef: document.forms[FORM_NAME],
+  submitCallback: async () => {
+    setToLS('isAlreadyRegistered', true);
+  },
+});
+
+const showAuthBtnRef = document.querySelector('.js-show-auth-btn');
 
 showAuthBtnRef.addEventListener('click', openSignUpModal);
