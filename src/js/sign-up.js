@@ -4,7 +4,9 @@ import { openModal } from '@/js/modal';
 const modalContentRef = document.querySelector('.js-app-modal-content');
 
 export const openSignUpModal = ({ isBlocked } = {}) => {
-  const markup = compileSignUpFormMarkup();
+  const markup = compileSignUpFormMarkup({
+    isEmailOnFirstPosition: true,
+  });
 
   modalContentRef.innerHTML = '';
   modalContentRef.insertAdjacentHTML('beforeend', markup);

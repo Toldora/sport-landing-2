@@ -35,6 +35,7 @@ const markup = compileSignUpFormMarkup({
   formName: FORM_NAME,
   formClass: 'main__desktop-sign-up-form',
   title: 'Criar Sua Conta Grátis',
+  isEmailOnFirstPosition: true,
 });
 
 const desktopSignUpWrapperRef = document.querySelector(
